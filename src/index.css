@@ -7,3 +7,13 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  color: #fafafa;
+}
+
+.header {
+  /* height: 5.938rem; */
+  padding: 1.5rem 0;
+  background-color: #fff;
+}

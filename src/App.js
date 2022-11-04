@@ -1,13 +1,15 @@
 import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Books from './pages/BooksPage';
+import Categories from './pages/CategoriesPage';
 
-const App = () => {
-  return (
-    <div>
-      <h1 className="text-3xl text-red-500 font-bold underline">
-        Hello world!
-      </h1>
-    </div>
-  );
-};
+const App = () => (
+  <div>
+    <Routes>
+      <Route path="/" element={<Books />} />
+      <Route path="/categories" element={<Categories />} />
+    </Routes>
+  </div>
+);
 
 export default App;
