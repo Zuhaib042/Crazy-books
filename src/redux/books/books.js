@@ -3,13 +3,19 @@ const ADD_BOOK = 'bookstore/books/ADD_BOOK';
 const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
 
 // Reducer
-export default function addReducer(state = [], action = {}) {
+const addremoveReducer = (state = [], action = {}) => {
   switch (action.type) {
     // do reducer stuff
+    case ADD_BOOK: {
+      return [...state, action.payload];
+    }
+    case REMOVE_BOOK: {
+      return [...state.filter((book) => book.id !== payload)];
+    }
     default:
       return state;
   }
-}
+};
 
 // Action Creators
 export const addBook = (payload) => {
@@ -25,3 +31,5 @@ export const removeBook = (payload) => {
     payload,
   };
 };
+
+export default addremoveReducer;
