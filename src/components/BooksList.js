@@ -22,19 +22,18 @@ const BooksList = () => {
     };
     setBooks([...books, book]);
   };
+  const booksElements = books.map((book) => (
+    <BookItem
+      title={book.title}
+      category={book.category}
+      author={book.author}
+      key={book.id}
+    />
+  ));
   return (
     <>
       <div className="books-container w-5/6 h-[70vh] overflow-scroll mt-8 mx-auto border border-red-200">
-        <ul>
-          {books.map((book) => (
-            <BookItem
-              title={book.title}
-              author={book.author}
-              category={book.category}
-              key={book.id}
-            />
-          ))}
-        </ul>
+        <ul>{booksElements}</ul>
       </div>
       <div className="w-5/6 mx-auto">
         <AddBook addABook={addABook} />
