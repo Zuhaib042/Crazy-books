@@ -1,33 +1,18 @@
-import React, { useState } from 'react';
-import { v4 as uuidv4 } from 'uuid';
+import React from 'react';
+import { useSelector } from 'react-redux';
 import AddBook from './AddBook';
 import BookItem from './BookItem';
 
 const BooksList = () => {
-  const [books, setBooks] = useState([
-    {
-      id: 1,
-      title: 'Narnia',
-      author: 'Zuhaib',
-      category: 'Action',
-    },
-  ]);
+  const books = useSelector((state) => state.addremove);
 
-  const addABook = (title, author, category) => {
-    const book = {
-      id: uuidv4(),
-      title,
-      author,
-      category,
-    };
-    setBooks([...books, book]);
-  };
   const booksElements = books.map((book) => (
     <BookItem
       title={book.title}
       category={book.category}
       author={book.author}
       key={book.id}
+      id={book.id}
     />
   ));
   return (
@@ -36,7 +21,7 @@ const BooksList = () => {
         <ul>{booksElements}</ul>
       </div>
       <div className="w-5/6 mx-auto">
-        <AddBook addABook={addABook} />
+        <AddBook />
       </div>
     </>
   );
