@@ -24,6 +24,7 @@ const BooksList = () => {
       category={book.category}
       author={book.author}
       key={book.id}
+      id={book.id}
     />
   ));
   return (
