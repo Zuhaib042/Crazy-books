@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { v4 as uuidv4 } from 'uuid';
+import { addBook } from '../redux/books/books';
 
-const AddBook = ({ addABook }) => {
+const AddBook = () => {
   const [input, setInput] = useState({
     title: '',
     author: '',
     category: '',
   });
-
+  const dispatch = useDispatch();
   const onChange = (e) => {
     setInput((prevState) => ({
       ...prevState,
@@ -16,12 +19,19 @@ const AddBook = ({ addABook }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    addABook(input.title, input.author, input.category);
     setInput({
       title: '',
       author: '',
       category: '',
     });
+    dispatch(
+      addBook({
+        id: uuidv4(),
+        title: input.title,
+        author: input.author,
+        category: input.category,
+      }),
+    );
   };
 
   return (

@@ -1,13 +1,13 @@
 import React from 'react';
 // import { v4 as uuidv4 } from 'uuid';
-// import AddBook from './AddBook';
 import { useSelector } from 'react-redux';
+import AddBook from './AddBook';
 import BookItem from './BookItem';
 
 const BooksList = () => {
   // const [books, setBooks] = useState([]);
   const books = useSelector((state) => state.addremove);
-  console.log(books);
+  // console.log(books);
 
   // const addABook = (title, author, category) => {
   //   const book = {
@@ -32,7 +32,7 @@ const BooksList = () => {
         <ul>{booksElements}</ul>
       </div>
       <div className="w-5/6 mx-auto">
-        {/* <AddBook addABook={addABook} /> */}
+        <AddBook />
       </div>
     </>
   );
