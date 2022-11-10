@@ -9,14 +9,12 @@ export const fetchBooksfromApi = async () => {
     },
   });
   const allBooks = await res.json();
-  const books = Object.keys(allBooks)
-    .map((id) => ({
-      id,
-      title: allBooks[id][0].title,
-      author: allBooks[id][0].author,
-      category: allBooks[id][0].category,
-    }))
-    .sort((bookA, bookB) => bookA.title.localeCompare(bookB.title));
+  const books = Object.keys(allBooks).map((id) => ({
+    id,
+    title: allBooks[id][0].title,
+    author: allBooks[id][0].author,
+    category: allBooks[id][0].category,
+  }));
   return books;
 };
 

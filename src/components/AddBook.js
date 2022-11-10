@@ -49,6 +49,7 @@ const AddBook = () => {
             value={input.title}
             onChange={onChange}
             placeholder="write Title"
+            required
           />
           <input
             className="py-2 px-2 h-12 rounded-md text-gray-500 col-span-5 md:col-span-3  border"
@@ -57,6 +58,7 @@ const AddBook = () => {
             value={input.author}
             onChange={onChange}
             placeholder="write Author"
+            required
           />
           <input
             className="py-2 px-2 h-12 rounded-md text-gray-500 col-span-5 md:col-span-3  border"
@@ -65,6 +67,7 @@ const AddBook = () => {
             value={input.category}
             onChange={onChange}
             placeholder="write Category"
+            required
           />
           <button
             type="submit"
