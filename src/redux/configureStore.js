@@ -1,12 +1,22 @@
-import { configureStore } from '@reduxjs/toolkit';
+import {
+  configureStore,
+  combineReducers,
+  applyMiddleware,
+} from '@reduxjs/toolkit';
+import thunk from 'redux-thunk';
 import addremoveReducer from './books/books';
 import checkstatusReducer from './categories/categories';
 
-const store = configureStore({
-  reducer: {
-    addremove: addremoveReducer,
-    checkstatus: checkstatusReducer,
-  },
+const reducer = combineReducers({
+  addremove: addremoveReducer,
+  checkstatus: checkstatusReducer,
 });
+
+const store = configureStore(
+  {
+    reducer,
+  },
+  applyMiddleware(thunk),
+);
 
 export default store;
