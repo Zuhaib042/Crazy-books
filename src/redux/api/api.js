@@ -1,7 +1,6 @@
-const baseUrl = // eslint-disable-line
-  'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/gINbrGI6GybOSE438a8P/books';
+const baseUrl = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/gINbrGI6GybOSE438a8P/books';
 
-export const fetchBooksfromApi = async () => {
+const fetchBooksfromApi = async () => {
   const res = await fetch(baseUrl, {
     method: 'GET',
     headers: {
@@ -18,29 +17,4 @@ export const fetchBooksfromApi = async () => {
   return books;
 };
 
-export const addBooktoApi = async ({ id, title, author, category }) => {
-  await fetch(baseUrl, {
-    method: 'POST',
-    body: JSON.stringify({
-      item_id: id,
-      title,
-      author,
-      category,
-    }),
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  });
-};
-
-export const removeBookfromApi = async (id) => {
-  await fetch(`${baseUrl}/${id}`, {
-    method: 'DELETE',
-    body: JSON.stringify({
-      item_id: id,
-    }),
-    headers: {
-      'Content-Type': 'application/json',
-    },
-  });
-};
+export default fetchBooksfromApi;

@@ -9,7 +9,7 @@ const BooksList = () => {
   const books = useSelector((state) => state.addremove);
   useEffect(() => {
     dispatch(fetchBooks());
-  }, []);
+  }, [dispatch]);
 
   const booksElements = books.map((book) => (
     <BookItem
