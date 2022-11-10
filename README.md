@@ -32,13 +32,13 @@ First run following command to clone project to your local machine
 
 `git clone https://github.com/Zuhaib042/Crazy-books.git`
 
-the run following to install dependencies : `npm install`
+then run following command to install dependencies : `npm install`
 
 ### Build and Run
 
-build the app by running following command in the terminal: `npm run build`
+After installing dependencies, build the app by running following command in the terminal: `npm run build`
 
-then run : `npm start`
+then run following command to run this app on your local server : `npm start`
 
 ## Authors
 
