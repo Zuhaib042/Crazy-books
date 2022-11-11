@@ -19,7 +19,7 @@ body {
 }
 
 .mont {
-  font-family: 'Montserrat';
+  font-family: 'Montserrat', sans-serif;
 }
 
 .bold {
@@ -35,7 +35,7 @@ body {
 }
 
 .roboto {
-  font-family: 'Roboto Slab';
+  font-family: 'Roboto Slab', serif;
 }
 
 .progress-container {
