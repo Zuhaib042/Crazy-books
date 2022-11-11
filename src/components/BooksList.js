@@ -21,14 +21,14 @@ const BooksList = () => {
     />
   ));
   return (
-    <>
-      <div className="books-container w-5/6 h-[70vh] overflow-scroll mt-8 mx-auto border border-red-200">
+    <div className="bg-[#fafafa]  py-9 ">
+      <div className="books-container bg-[#fafafa] w-5/6 h-[70vh] overflow-scroll  mx-auto ">
         <ul>{booksElements}</ul>
       </div>
       <div className="w-5/6 mx-auto">
         <AddBook />
       </div>
-    </>
+    </div>
   );
 };
 

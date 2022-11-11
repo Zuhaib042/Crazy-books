@@ -35,11 +35,11 @@ const AddBook = () => {
   };
 
   return (
-    <div className="">
-      <h2>Add a Book</h2>
+    <div className="border-t-[1px] mt-[2.5rem] b-4">
+      <h2 className="mont bold text-[1.25rem] mt-7 text-[#888]">Add a Book</h2>
       <div className="">
         <form
-          className=" grid items-center mx-auto md:mx-0 grid-cols-11 gap-x-4 gap-y-4 border"
+          className=" grid items-center mx-auto md:mx-0 grid-cols-11 gap-x-4 gap-y-4 mt-4"
           onSubmit={handleSubmit}
         >
           <input
