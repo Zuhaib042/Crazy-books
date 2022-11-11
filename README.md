@@ -46,7 +46,7 @@ then run following command to run this app on your local server : `npm start`
 
 - GitHub: [@Zuhaib042](https://github.com/Zuhaib042)
 - Twitter: [@Zuhaib042](https://twitter.com/Zuhaib042)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/zuhaib-amjad-488914234/)
 
 ## 🤝 Contributing
 
